@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="ka (kaosfield)" />
+  <meta name="date" content="2015-09-06" />
+  <title>近況報告@tokushima.app-6</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">近況報告@tokushima.app-6</h1>
+  <p class="author">
+ka (<a href="http://www.kaosfield.net">kaosfield</a>)
+  </p>
+  <p class="date">2015-09-06</p>
+</div>
+<div id="agenda" class="slide section level1">
+<h1>Agenda</h1>
+<ul class="incremental">
+<li>プリキュアハッカソン
+<ul class="incremental">
+<li>rubicure_fuzzy_match
+<ul class="incremental">
+<li>fuzy_match</li>
+<li>test-unit</li>
+</ul></li>
+</ul></li>
+<li>Elixir
+<ul class="incremental">
+<li>Programming Elixir</li>
+<li>Phoenix</li>
+</ul></li>
+<li>Make gems
+<ul class="incremental">
+<li>color-scheme-validator</li>
+<li>conoha</li>
+</ul></li>
+<li>デスクトップ改善</li>
+</ul>
+</div>
+<div id="プリキュアハッカソンに参加してきました" class="slide section level1">
+<h1>プリキュアハッカソンに参加してきました</h1>
+<p><a href="http://connpass.com/event/17280/">プリキュアハッカソン 3 - connpass</a></p>
+<p><img src="precure-hackathon-3.png" height="300px"></p>
+<p>プリキュアの映画を見ながらテンションを高めることにより進捗を得る</p>
+<p><strong>最高感ある</strong></p>
+</div>
+<div id="rubicure_fuzzy_match" class="slide section level1">
+<h1>rubicure_fuzzy_match</h1>
+<p>Rubicureというgemに曖昧検索機能を追加するgemを作った</p>
+<p>本体を改造するのではなく後からメソッドを追加する方針</p>
+<p>それを読み込むだけでrubicureもそのまま使えるし追加機能も使える</p>
+<p><code>rspec-rails</code>とか<code>factory_girl_rails</code>のノリ</p>
+<ul class="incremental">
+<li>リポジトリ: <a href="https://github.com/kaosf/rubicure_fuzzy_match">kaosf/rubicure_fuzzy_match</a></li>
+<li>スライド: <a href="http://kaosf.github.io/rubicure-fuzzy-match-slide">Rubicureをあいまい検索対応強化してみた</a></li>
+</ul>
+</div>
+<div id="かなり適当な検索で作品を取ってこれる" class="slide section level1">
+<h1>かなり適当な検索で作品を取ってこれる</h1>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="dt">Rubicure</span>::<span class="dt">Seriese</span>.fuzzy_find <span class="st">&#39;ss&#39;</span>
+<span class="co">#=&gt; {:series_name=&gt;&quot;splash_star&quot;, :title=&gt;&quot;ふたりはプリキュア Splash☆Star&quot;, :started_date=&gt;Sun, 05 Feb 2006, :ended_date=&gt;Sun, 28 Jan 2007, :girls=&gt;[&quot;cure_bloom&quot;, &quot;cure_egret&quot;]}</span>
+
+<span class="dt">Rubicure</span>::<span class="dt">Seriese</span>.fuzzy_find <span class="st">&#39;ゴプリ&#39;</span>
+<span class="co">#=&gt; {:series_name=&gt;&quot;go_princess&quot;, :title=&gt;&quot;Go!プリンセスプリキュア&quot;, :started_date=&gt;Sun, 01 Feb 2015, :girls=&gt;[&quot;cure_flora&quot;, &quot;cure_mermaid&quot;, &quot;cure_twinkle&quot;, &quot;cure_scarlett&quot;]}</span>
+
+<span class="dt">Rubicure</span>::<span class="dt">Seriese</span>.fuzzy_find <span class="st">&#39;ハト&#39;</span>
+<span class="co">#=&gt; {:series_name=&gt;&quot;heart_catch&quot;, :title=&gt;&quot;ハートキャッチプリキュア！&quot;, :started_date=&gt;Sun, 07 Feb 2010, :ended_date=&gt;Sun, 30 Jan 2011, :girls=&gt;[&quot;cure_blossom&quot;, &quot;cure_marine&quot;, &quot;cure_sunshine&quot;, &quot;cure_moonlight&quot;]}</span>
+
+<span class="dt">Rubicure</span>::<span class="dt">Seriese</span>.fuzzy_find <span class="st">&#39;姫プリ&#39;</span>
+<span class="co">#=&gt; {:series_name=&gt;&quot;go_princess&quot;, :title=&gt;&quot;Go!プリンセスプリキュア&quot;, :started_date=&gt;Sun, 01 Feb 2015, :girls=&gt;[&quot;cure_flora&quot;, &quot;cure_mermaid&quot;, &quot;cure_twinkle&quot;, &quot;cure_scarlett&quot;]}</span></code></pre></div>
+</div>
+<div id="作品名の正規化" class="slide section level1">
+<h1>作品名の正規化</h1>
+<p><code>Rubicure::Seriese.regularize</code> メソッドで正規化が出来る</p>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="dt">Rubicure</span>::<span class="dt">Seriese</span>.regularize <span class="st">&#39;splashstar&#39;</span> <span class="co">#=&gt; &quot;ふたりはプリキュア Splash☆Star&quot;</span>
+<span class="dt">Rubicure</span>::<span class="dt">Seriese</span>.regularize <span class="st">&#39;スマプリ&#39;</span> <span class="co">#=&gt; &quot;スマイルプリキュア！&quot;</span>
+<span class="dt">Rubicure</span>::<span class="dt">Seriese</span>.regularize <span class="st">&#39;スマイプリ&#39;</span> <span class="co">#=&gt; &quot;スマイルプリキュア！&quot;</span>
+<span class="dt">Rubicure</span>::<span class="dt">Seriese</span>.regularize <span class="st">&#39;ハピチャ&#39;</span> <span class="co">#=&gt; &quot;ハピネスチャージプリキュア！&quot;</span></code></pre></div>
+</div>
+<div id="fuzzy_matchという面白そうなgem" class="slide section level1">
+<h1>fuzzy_matchという面白そうなgem</h1>
+<p>あいまい検索が出来るようになる</p>
+<p><a href="https://github.com/seamusabshere/fuzzy_match">seamusabshere/fuzzy_match</a></p>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">require <span class="st">&#39;fuzzy_match&#39;</span>
+
+fm = <span class="dt">FuzzyMatch</span>.new [<span class="st">&#39;プリキュア&#39;</span>, <span class="st">&#39;ナージャ&#39;</span>]
+fm.find <span class="st">&#39;ナンジャ&#39;</span> <span class="co">#=&gt; &quot;ナージャ&quot;</span>
+fm.find <span class="st">&#39;プリプリ&#39;</span> <span class="co">#=&gt; &quot;プリキュア&quot;</span>
+fm.find <span class="st">&#39;どれみ&#39;</span>   <span class="co">#=&gt; nil</span></code></pre></div>
+</div>
+<div id="test-unit" class="slide section level1">
+<h1>test-unit</h1>
+<p>RSpecを無理して使う時代ではもう無い</p>
+<p>test-unitを使ってみている</p>
+<p><a href="http://qiita.com/repeatedly/items/727b08599d87af7fa671">Ruby - Test::Unitでテストを書く - Qiita</a></p>
+</div>
+<div id="データ駆動テスト出来る" class="slide section level1">
+<h1>データ駆動テスト出来る</h1>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="kw">class</span> <span class="dt">TestRubicureFuzzyMatch</span> &lt; <span class="dt">Test</span>::<span class="dt">Unit</span>::<span class="dt">TestCase</span>
+  data(
+    <span class="st">&quot;ふたり&quot;</span>      =&gt; [<span class="st">&quot;ふたり&quot;</span>     , <span class="st">&quot;ふたりはプリキュア&quot;</span>            ],
+    <span class="st">&quot;初代&quot;</span>        =&gt; [<span class="st">&quot;初代&quot;</span>       , <span class="st">&quot;ふたりはプリキュア&quot;</span>            ],
+    ...
+    <span class="st">&quot;姫プリ&quot;</span>      =&gt; [<span class="st">&quot;姫プリ&quot;</span>     , <span class="st">&quot;Go!プリンセスプリキュア&quot;</span>       ])
+  test <span class="st">&#39;.regularize&#39;</span> <span class="kw">do</span> |data|
+    assert_equal data[<span class="dv">1</span>], <span class="dt">Rubicure</span>::<span class="dt">Seriese</span>.regularize(data[<span class="dv">0</span>])
+  <span class="kw">end</span>
+  ...
+<span class="kw">end</span></code></pre></div>
+</div>
+<div id="elixir" class="slide section level1">
+<h1>Elixir</h1>
+<p>Erlang VMの上で動くプログラムを書くためのRuby風の文法を持った言語</p>
+</div>
+<div id="書籍" class="slide section level1">
+<h1>書籍</h1>
+<p><a href="https://pragprog.com/book/elixir/programming-elixir">The Pragmatic Bookshelf | Programming Elixir</a></p>
+<p><img src="elixir.jpg" height="300px"></p>
+<p>洋書だけど頑張って読んでる</p>
+<p>(RubyとClojureとOCamlとHaskellの経験のおかげでコードは割と楽に読めている)</p>
+</div>
+<div id="phoenix" class="slide section level1">
+<h1>Phoenix</h1>
+<p><a href="http://www.phoenixframework.org/">Phoenix</a></p>
+<ul class="incremental">
+<li>1.0.0が8月の末に出たばっかりのWAP</li>
+<li>ユーザ認証まわりとかライブラリを調べないと感</li>
+<li><img src="korekaramainichi.png" height="300px"></li>
+</ul>
+</div>
+<div id="make-gems" class="slide section level1">
+<h1>Make gems</h1>
+<p>最近いろいろgemを作っている</p>
+<p>gemはどんどんカジュアルに作っていって良い</p>
+</div>
+<div id="color-scheme-validator" class="slide section level1">
+<h1>color-scheme-validator</h1>
+<p>リポジトリ: <a href="https://github.com/kaosf/color-scheme-validator">kaosf/color-scheme-validator</a></p>
+<p>rubygems.org: <a href="https://rubygems.org/gems/color-scheme-validator">color-scheme-validator | RubyGems.org | your community gem host</a></p>
+<p>Rails で Color Scheme (#FF0000 とか #00ffff とか) のバリデーションを行う</p>
+<p>カスタムバリデータ(と言うらしい)</p>
+</div>
+<div id="使い方" class="slide section level1">
+<h1>使い方</h1>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="kw">class</span> <span class="dt">Item</span> &lt; <span class="dt">ActiveRecord</span>::<span class="dt">Base</span>
+  validates <span class="st">:name</span>, <span class="st">presence: </span><span class="dv">true</span>
+
+  validates <span class="st">:color</span>, <span class="st">color_scueme: </span><span class="dv">true</span>
+<span class="kw">end</span></code></pre></div>
+</div>
+<div id="rails-g-も調子に乗って出来るようにしてみた" class="slide section level1">
+<h1>rails g も調子に乗って出来るようにしてみた</h1>
+<pre class="sh"><code>rails g colorscheme install ja</code></pre>
+<p>自動で <code>config/locales/colorscheme.ja.yml</code> が作られる</p>
+</div>
+<div id="conoha" class="slide section level1">
+<h1>conoha</h1>
+<p>リポジトリ: <a href="https://github.com/kaosf/conoha">kaosf/conoha</a></p>
+<p>ConoHa の VPS で以下のことが簡単に出来るように</p>
+<ul class="incremental">
+<li>VPS一覧表示</li>
+<li>VPSを作る</li>
+<li>VPSを破棄する</li>
+<li>bootする</li>
+<li>shutdownする</li>
+<li>イメージを保存する(backup)</li>
+<li>イメージからマシンを作る(restore)</li>
+<li>ssh起動する</li>
+<li>などなど</li>
+</ul>
+</div>
+<div id="使い方-1" class="slide section level1">
+<h1>使い方</h1>
+<p>作る</p>
+<pre class="sh"><code>conoha create ubuntu g-1gb</code></pre>
+<p>一覧確認</p>
+<pre class="sh"><code>conoha vpslist</code></pre>
+<p>バックアップ</p>
+<pre class="sh"><code>conoha imagecreate 01234567-89ab-cdef-0123-456789abcdef ubuntu-backup</code></pre>
+<p>復元</p>
+<pre class="sh"><code>conoha createfromimage fedcba98-7654-3210-fedc-ba9876543210 g-1gb</code></pre>
+</div>
+<div id="api" class="slide section level1">
+<h1>API</h1>
+<p><code>Conoha</code>クラスに各種機能を実装してある</p>
+<p>先ほどの<code>conoha</code>コマンドは単にそれを実行するだけ</p>
+<p>なので仮にクラウドサービスを作るとしてそのバックエンドを担うことが出来る</p>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="dt">Conoha</span>.init!
+<span class="dt">Conoha</span>.create <span class="st">&quot;01234567-89ab-cdef-0123-456789abcdef&quot;</span>, <span class="st">&quot;g-1gb&quot;</span></code></pre></div>
+</div>
+<div id="まだまだ作成中" class="slide section level1">
+<h1>まだまだ作成中</h1>
+<p>betaバージョンなので誰か使って下さい</p>
+<p>機能は必要最小限あるがhelp messageが無かったりエラーへの対処が弱かったり</p>
+</div>
+<div id="デスクトップ改善" class="slide section level1">
+<h1>デスクトップ改善</h1>
+<p>作業環境を改善した</p>
+</div>
+<div id="買ったもの" class="slide section level1">
+<h1>買ったもの</h1>
+<p><a href="http://www.amazon.co.jp/dp/B00B7YMHIG">Amazon.co.jp： ユニットコム　凄腕　UNI-LCD-ARM-VDUAL　液晶モニタアームアーム　VESA規格75/100mm対応 縦DUALモニタ クランプ固定式: パソコン・周辺機器</a></p>
+<p><img src="arm1.jpg" height="300px"> <img src="arm2.jpg" height="300px"></p>
+</div>
+<div id="夢のモニタ二台縦置き" class="slide section level1">
+<h1>夢のモニタ二台縦置き</h1>
+<div>
+<img src="2-vertical-monitors.jpg" height="450px" style="float:left">
+<ul class="incremental" style="float:left">
+<li>
+上部にテレビを映せる
+</li>
+<li>
+下部がPCのサブモニタ
+</li>
+<li>
+<strong>実況が捗る！！</strong>
+</li>
+</ul>
+</div>
+</div>
+<div id="高い位置のモニタを使うメリット" class="slide section level1">
+<h1>高い位置のモニタを使うメリット</h1>
+<ul class="incremental">
+<li>椅子の背もたれに頭を完全にあずけて上を仰ぎ見る形でも難なく作業が出来る</li>
+<li>リクライニングを倒した時に丁度目線の位置にモニタがある</li>
+<li><strong>最高感ある</strong></li>
+</ul>
+</div>
+<div id="更によかったこと" class="slide section level1">
+<h1>更によかったこと</h1>
+<ul class="incremental">
+<li>なんとこのモニタアーム6000円でした</li>
+<li>実際安い</li>
+<li><img src="http://www.tendertown.net/mt/pollyanna/pollyanna001chan.gif" height="300px"> (<a href="http://www.tendertown.net/mt/pollyanna.html">愛少女ポリアンナ物語（世界名作劇場）ファンサイト by 名作アニメの杜</a>)</li>
+</ul>
+</div>
+<div id="section" class="slide section level1">
+<h1></h1>
+<p>いろいろあった8月と9月初頭でした</p>
+</div>
+<div id="section-1" class="slide section level1">
+<h1></h1>
+<p>おわり</p>
+</div>
+</body>
+</html>
+<!-- Pandoc version:
+pandoc 1.15.0.6
+Compiled with texmath 0.8.2, highlighting-kate 0.6.
+Syntax highlighting is supported for the following languages:
+    abc, actionscript, ada, agda, apache, asn1, asp, awk, bash, bibtex, boo, c,
+    changelog, clojure, cmake, coffee, coldfusion, commonlisp, cpp, cs, css,
+    curry, d, diff, djangotemplate, dockerfile, dot, doxygen, doxygenlua, dtd,
+    eiffel, email, erlang, fasm, fortran, fsharp, gcc, glsl, gnuassembler, go,
+    haskell, haxe, html, idris, ini, isocpp, java, javadoc, javascript, json,
+    jsp, julia, kotlin, latex, lex, lilypond, literatecurry, literatehaskell,
+    lua, m4, makefile, mandoc, markdown, mathematica, matlab, maxima, mediawiki,
+    metafont, mips, modelines, modula2, modula3, monobasic, nasm, noweb,
+    objectivec, objectivecpp, ocaml, octave, opencl, pascal, perl, php, pike,
+    postscript, prolog, pure, python, r, relaxng, relaxngcompact, rest, rhtml,
+    roff, ruby, rust, scala, scheme, sci, sed, sgml, sql, sqlmysql,
+    sqlpostgresql, tcl, tcsh, texinfo, verilog, vhdl, xml, xorg, xslt, xul,
+    yacc, yaml, zsh
+Default user data directory: <DELETED>
+Copyright (C) 2006-2015 John MacFarlane
+Web:  http://pandoc.org
+This is free software; see the source for copying conditions.
+There is no warranty, not even for merchantability or fitness
+for a particular purpose.
+-->
