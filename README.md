@@ -124,7 +124,7 @@ Erlang VMの上で動くプログラムを書くためのRuby風の文法を持�
 
 [Phoenix](http://www.phoenixframework.org/)
 
-- 1.0.0が8月の末に出たばっかりのWAP
+- 1.0.0が8月の末に出たばっかりのWeb Application Framework
 - ユーザ認証まわりとかライブラリを調べないと感
 - <img src="korekaramainichi.png" height="300px">
 
